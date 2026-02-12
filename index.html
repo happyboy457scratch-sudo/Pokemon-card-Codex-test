@@ -9,12 +9,13 @@
   <body>
     <main class="container">
       <section class="glass panel" id="auth-panel">
+        <p class="eyebrow">Updated GitHub build</p>
         <h1>PokéPrice Scout</h1>
-        <p class="muted">Search Pokémon cards, prices, and photos instantly.</p>
+        <p class="muted">Login first, then search Pokémon cards with photos and live prices.</p>
 
         <div class="tabs">
-          <button id="tab-login" class="tab active">Login</button>
-          <button id="tab-signup" class="tab">Sign up</button>
+          <button id="tab-login" class="tab active" type="button">Login</button>
+          <button id="tab-signup" class="tab" type="button">Sign up</button>
         </div>
 
         <form id="auth-form" class="form">
@@ -41,15 +42,20 @@
             <h2>Card Price Search</h2>
             <p class="muted" id="welcome"></p>
           </div>
-          <button id="logout" class="btn">Logout</button>
+          <button id="logout" class="btn" type="button">Logout</button>
         </header>
 
         <form id="search-form" class="search-row">
           <input id="search" type="text" placeholder="Search: Charizard, Pikachu, Mew..." required />
           <button class="btn primary" type="submit">Search</button>
         </form>
-        <p id="status" class="muted"></p>
 
+        <div class="source-pill-row">
+          <span class="source-pill">Primary: PriceCharting match</span>
+          <span class="source-pill">Fallback: Pokémon TCG market</span>
+        </div>
+
+        <p id="status" class="muted"></p>
         <section id="results" class="grid"></section>
       </section>
     </main>
